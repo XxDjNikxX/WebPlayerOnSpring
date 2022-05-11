@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/backend/SpringWebPlayer.iml" filepath="$PROJECT_DIR$/backend/SpringWebPlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/frontend/SpringWebPlayer (1).iml" filepath="$PROJECT_DIR$/frontend/SpringWebPlayer (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/WebPlayerOnSpring.iml" filepath="$PROJECT_DIR$/.idea/WebPlayerOnSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" />
     </modules>
   </component>
 </project>

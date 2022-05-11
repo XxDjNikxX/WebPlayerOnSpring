@@ -1,4 +1,5 @@
 <template>
+
   <section class="player">
     <div class="w-full font-body">
       <div class="flex items-center justify-center h-screen bg-whie dark:bg-indigo-400">
@@ -61,7 +62,7 @@
           <div class="mx-8 py-4">
             <div class="flex justify-between text-sm">
               <p>0:00</p>
-              <p>4:20</p>
+              <p>{{current.duration}}</p>
             </div>
             <div class="mt-1">
               <div class="h-1  rounded-full  bg-gradient-to-r from-slate-500 bg-indigo-600">
@@ -78,27 +79,27 @@
   </section>
 
 </template>
+
 <script>
-import axios from 'axios';
+import {AXIOS} from './assets/http-common/http-commons';
   export default {
     name: 'App',
     data() {
       return {
-        current: {},
+        current:{},
         index: 0,
         isPlaying: false,
         songs: [
           {
-            title: '',
-            artist: '',
-            src: '',
-          }
+            title: 'Song Player by DjNik',
+            artist: 'DjNik',
+            src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null',
+          },
         ],
         player: new Audio()
       }
     },
     methods: {
-  
       play(song) {
         if (typeof song.src != "undefined") {
           this.current = song;
@@ -137,13 +138,20 @@ import axios from 'axios';
       }
     },
     created() {
-      axios.get('http:localhost:8098/api/songs/getSongFileName/' + '62717d55ae7539360f5e1c9e').then(resonse => {
-          this.title = resonse.title,
-          this.src = 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + resonse.fileName
-          console.log(resonse)
-        });
-      this.current = this.songs[this.index];
-      this.player.src = this.current.src;
+      AXIOS.get('api/songs/62718375ec3c8b6d3d80bead').then(response => {
+        var b = {
+          title: response.data.title,
+          artist: response.data.artist,
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName
+        };
+        this.songs.push(b);
+        //console.log(this.songs);
+      });
+      // this.player.onloadedmetadata = ()=> {
+      //     this.current = this.player.duration / 60;
+      // };
+      // this.current = this.songs[this.index];
+      // this.player.src = this.current.src;
     }
   }
 </script>
