@@ -27,4 +27,8 @@ public class Song {
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
+
+    public String getArtist() {
+        return artist;
+    }
 }
