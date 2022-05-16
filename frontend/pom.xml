@@ -6,7 +6,7 @@
 
     <groupId>com.project</groupId>
     <artifactId>frontend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.1</version>
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>

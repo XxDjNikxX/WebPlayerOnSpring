@@ -42,6 +42,10 @@
                 <div @click="play"
                   class="p-8 rounded-full dark:bg-white shadow-lg dark:text-black hover:fill-indigo-400 transition duration-300"
                   v-else>
+                  <svg class="w-8" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+                    <path class="st0" d="M20.5,10.26l-20,10.53l0-20L20.5,10.26z"/>
+                  </svg>
                 </div>
                 <div class="text-gray-700" @click="next">
                   <svg class="w-8 h-8 hover:fill-indigo-400 dark:text-white transition duration-300" fill="currentColor"
@@ -79,7 +83,9 @@
 </template>
 
 <script>
-  import {AXIOS} from '../http-common/http-commons';
+  import {
+    AXIOS
+  } from '../http-common/http-commons';
   export default {
     name: 'MainPage',
     data() {
