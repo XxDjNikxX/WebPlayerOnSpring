@@ -8,7 +8,6 @@
 		<groupId>com.project</groupId>
 		<artifactId>WebPlayerOnSpring</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
