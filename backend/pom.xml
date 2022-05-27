@@ -7,14 +7,13 @@
 	<parent>
 		<groupId>com.project</groupId>
 		<artifactId>WebPlayerOnSpring</artifactId>
-		<version>1.1</version>
-		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/>
 	</parent>
-	<groupId>com.project</groupId>
-	<version>1.1</version>
-	<description>Diploma Project w/h Spring</description>
 	<properties>
-		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

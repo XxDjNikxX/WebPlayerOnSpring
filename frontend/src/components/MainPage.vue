@@ -93,11 +93,11 @@
         current: {},
         index: 0,
         isPlaying: false,
-        songs: [{
-          title: 'Song Player by DjNik',
+        songs:[{
+          title: 'Song Player',
           artist: 'DjNik',
-          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null',
-        }, ],
+          src: 'https://yebanko.ru/files+/audio/nevoshedsheye/landyshi.mp3?1'
+        }],
         player: new Audio()
       }
     },
@@ -140,7 +140,7 @@
       }
     },
     created() {
-      AXIOS.get('api/songs/62718375ec3c8b6d3d80bead').then(response => {
+      AXIOS.get('api/songs/628695a99dd71c500df840ae').then(response => {
         var b = {
           title: response.data.title,
           artist: response.data.artist,
@@ -149,6 +149,7 @@
         this.songs.push(b);
         console.log(this.songs);
       });
+
       // this.player.onloadedmetadata = ()=> {
       //     this.current = this.player.duration / 60;
       // };

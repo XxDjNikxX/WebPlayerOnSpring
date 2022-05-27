@@ -1,6 +1,6 @@
-package com.project.SpringWebPlayer;
+package com.project.webplayer;
 
-import com.project.SpringWebPlayer.services.StorageService;
+import com.project.webplayer.services.StorageService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

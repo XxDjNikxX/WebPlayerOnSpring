@@ -7,24 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringWebPlayer (1)" />
         <module name="SpringWebPlayer" />
         <module name="backend" />
+        <module name="frontend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="backend" target="17" />
+      <module name="frontend" target="17" />
       <module name="SpringWebPlayer" target="17" />
-      <module name="SpringWebPlayer (1)" target="8" />
+      <module name="SpringWebPlayer (1)" target="17" />
       <module name="WebPlayerOnSpring" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringWebPlayer" options="-parameters" />
-      <module name="SpringWebPlayer (1)" options="" />
+      <module name="SpringWebPlayer (1)" options="-parameters" />
       <module name="WebPlayerOnSpring" options="-parameters" />
       <module name="backend" options="-parameters" />
+      <module name="frontend" options="-parameters" />
     </option>
   </component>
 </project>

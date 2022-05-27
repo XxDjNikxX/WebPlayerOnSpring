@@ -1,4 +1,4 @@
-package com.project.SpringWebPlayer.services;
+package com.project.webplayer.services;
 
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;

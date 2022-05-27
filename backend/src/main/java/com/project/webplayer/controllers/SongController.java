@@ -1,9 +1,9 @@
-package com.project.SpringWebPlayer.controllers;
+package com.project.webplayer.controllers;
 
 
-import com.project.SpringWebPlayer.model.Song;
-import com.project.SpringWebPlayer.repository.SongRepository;
-import com.project.SpringWebPlayer.services.StorageService;
+import com.project.webplayer.model.Song;
+import com.project.webplayer.repository.SongRepository;
+import com.project.webplayer.services.StorageService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

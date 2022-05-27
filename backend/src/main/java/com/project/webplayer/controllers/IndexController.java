@@ -1,7 +1,7 @@
-package com.project.SpringWebPlayer.controllers;
+package com.project.webplayer.controllers;
 
 
-import com.project.SpringWebPlayer.services.StorageService;
+import com.project.webplayer.services.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

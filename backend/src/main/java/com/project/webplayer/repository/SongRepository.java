@@ -1,6 +1,6 @@
-package com.project.SpringWebPlayer.repository;
+package com.project.webplayer.repository;
 
-import com.project.SpringWebPlayer.model.Song;
+import com.project.webplayer.model.Song;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface SongRepository  extends MongoRepository<Song, String> {
