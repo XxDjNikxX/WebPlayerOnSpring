@@ -1,7 +1,7 @@
 <template>
   <section class="player">
     <div class="w-full font-body">
-      <div class="flex items-center justify-center h-screen bg-whie dark:bg-indigo-400">
+      <div class="flex items-center justify-center h-screen bg-whie bg-indigo-200 dark:bg-indigo-400">
         <div class="bg-slate-200 shadow-lg rounded-md w-3/5 dark:bg-slate-800 dark:text-white">
           <div class="flex ">
             <div class="w-full p-8">
