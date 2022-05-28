@@ -1,2 +1,1 @@
-web: java -Dserver.port=$PORT -jar backend/target/backend-0.0.1-SNAPSHOT.jar
-web: npm run serve
+web: java -Dserver.port=$PORT -jar backend/target/backend-0.0.1-SNAPSHOT.jar frontend/target/frontend-0.0.1-SNAPSHOT.jar
