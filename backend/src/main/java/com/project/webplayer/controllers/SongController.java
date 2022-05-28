@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping("/api/songs")
 public class SongController {
     private final StorageService storageService;
