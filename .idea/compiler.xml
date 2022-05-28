@@ -14,10 +14,10 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="backend" target="17" />
-      <module name="frontend" target="17" />
-      <module name="SpringWebPlayer" target="17" />
+      <module name="frontend" target="1.8" />
+      <module name="SpringWebPlayer" target="1.8" />
       <module name="SpringWebPlayer (1)" target="17" />
-      <module name="WebPlayerOnSpring" target="17" />
+      <module name="WebPlayerOnSpring" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
