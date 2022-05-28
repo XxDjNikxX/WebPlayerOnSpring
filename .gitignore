@@ -1,3 +1,4 @@
 # Project exclude paths
 /frontend/target/
 /Classes.uml
+.env
