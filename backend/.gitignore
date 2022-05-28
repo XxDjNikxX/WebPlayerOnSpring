@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/public/static/css/app.0f418ffa.css
+/src/main/resources/public/static/js/app.e353ec1d.js
+/src/main/resources/public/static/js/app.e353ec1d.js.map
+/src/main/resources/public/static/js/chunk-vendors.ac35b2bd.js
+/src/main/resources/public/static/js/chunk-vendors.ac35b2bd.js.map
+/src/main/resources/public/index.html

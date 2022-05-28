@@ -140,7 +140,7 @@
       }
     },
     created() {
-      AXIOS.get('/songs/628695a99dd71c500df840ae').then(response => {
+      AXIOS.get('/628695a99dd71c500df840ae').then(response => {
         var b = {
           title: response.data.title,
           artist: response.data.artist,
