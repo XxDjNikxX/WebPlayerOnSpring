@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/api/songs")
+@RequestMapping("/api")
 public class SongController {
     private final StorageService storageService;
     private final SongRepository songRepository;
