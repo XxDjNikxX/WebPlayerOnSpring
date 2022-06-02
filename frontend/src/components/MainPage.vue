@@ -86,6 +86,7 @@
   import {
     AXIOS
   } from '../http-common/http-commons';
+  
   export default {
     name: 'MainPage',
     data() {
@@ -96,7 +97,7 @@
         songs:[{
           title: 'Song Player',
           artist: 'DjNik',
-          src: 'https://yebanko.ru/files+/audio/nevoshedsheye/landyshi.mp3?1'
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null'
         }],
         player: new Audio()
       }
@@ -129,6 +130,7 @@
         }
         this.current = this.songs[this.index];
         this.play(this.current);
+        console.log(this.player.duration / 3600);
       },
       prev() {
         this.index--;
