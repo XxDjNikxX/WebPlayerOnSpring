@@ -68,10 +68,10 @@
               <p>{{current.duration}}</p>
             </div>
             <div class="mt-1">
-              <div class="h-1  rounded-full  bg-gradient-to-r from-slate-500 bg-indigo-600">
-                <div class="w-1/5 h-1 bg-red-light rounded-full relative">
-                  <span
-                    class="w-4 h-4 bg-indigo-900 absolute pin-r pin-b -mt-1 rounded-full shadow dark:bg-white hover:bg-indigo-400 transition duration-300"></span>
+              <div @click="seek" class="h-1  rounded-full  bg-gradient-to-r from-slate-500 bg-indigo-600">
+                <div   class="w-1/5 h-1 bg-red-light rounded-full relative">
+                  <div :style="{ width: this.percentComplete + '%' }" 
+                    class="w-4 h-4 bg-indigo-900 absolute pin-r pin-b -mt-1 rounded-full shadow dark:bg-white hover:bg-indigo-400 transition duration-300"></div>
                 </div>
               </div>
             </div>
@@ -125,11 +125,16 @@
 
         this.player.addEventListener('loadedmetadata', function() {
           this.current.duration = this.setDuration(this.player.duration);
-        
         }.bind(this));
 
         this.isPlaying = true;
       },
+      seek(e) {
+			const el = e.target.getBoundingClientRect();
+			const seekPos = (e.clientX - el.left) / el.width;
+
+			this.player.currentTime = parseInt(this.player.duration * seekPos);
+		},
       pause() {
         this.player.pause();
         this.isPlaying = false;

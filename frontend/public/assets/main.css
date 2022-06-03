@@ -1067,3 +1067,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.progress{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: teal;
+}
