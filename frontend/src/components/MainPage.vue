@@ -97,7 +97,7 @@
         songs:[{
           title: 'Song Player',
           artist: 'DjNik',
-          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null'
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/Юность в сапогах (Gachi Version) _ Гачимучи ремикс.mp3'
         }],
         player: new Audio()
       }
@@ -109,6 +109,7 @@
           this.player.src = this.current.src;
         }
         this.player.play();
+
         this.player.addEventListener('ended', function () {
           this.index++;
           if (this.index > this.songs.length - 1) {
@@ -117,6 +118,18 @@
           this.current = this.songs[this.index];
           this.play(this.current);
         }.bind(this));
+
+        this.player.addEventListener('loadedmetadata', function() {
+          var seconds = Math.round(this.player.duration);
+          var minutes = Math.floor(seconds / 60);
+          minutes = (minutes >= 10) ? minutes : "0" + minutes;
+          
+          seconds = Math.floor(seconds % 60);
+          seconds = (seconds >= 10) ? seconds : "0" + seconds;
+          this.current.duration = minutes + ":" + seconds;
+
+        }.bind(this));
+
         this.isPlaying = true;
       },
       pause() {
@@ -130,7 +143,6 @@
         }
         this.current = this.songs[this.index];
         this.play(this.current);
-        console.log(this.player.duration / 3600);
       },
       prev() {
         this.index--;
@@ -151,12 +163,6 @@
         this.songs.push(b);
         console.log(this.songs);
       });
-
-      // this.player.onloadedmetadata = ()=> {
-      //     this.current = this.player.duration / 60;
-      // };
-      // this.current = this.songs[this.index];
-      // this.player.src = this.current.src;
     }
   }
 </script>
