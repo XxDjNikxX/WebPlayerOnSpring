@@ -64,7 +64,7 @@
           </div>
           <div class="mx-8 py-4">
             <div class="flex justify-between text-sm">
-              <p>0:00</p>
+              <p>{{current.currentTime}}</p>
               <p>{{current.duration}}</p>
             </div>
             <div class="mt-1">
@@ -119,15 +119,13 @@
           this.play(this.current);
         }.bind(this));
 
-        this.player.addEventListener('loadedmetadata', function() {
-          var seconds = Math.round(this.player.duration);
-          var minutes = Math.floor(seconds / 60);
-          minutes = (minutes >= 10) ? minutes : "0" + minutes;
-          
-          seconds = Math.floor(seconds % 60);
-          seconds = (seconds >= 10) ? seconds : "0" + seconds;
-          this.current.duration = minutes + ":" + seconds;
+        this.player.addEventListener('timeupdate', function() {
+          this.current.currentTime = this.setDuration(this.player.currentTime);
+        }.bind(this));
 
+        this.player.addEventListener('loadedmetadata', function() {
+          this.current.duration = this.setDuration(this.player.duration);
+        
         }.bind(this));
 
         this.isPlaying = true;
@@ -151,7 +149,16 @@
         }
         this.current = this.songs[this.index];
         this.play(this.current);
-      }
+      },
+      setDuration : function(currentDuration) {
+          var seconds = Math.round(currentDuration);
+          var minutes = Math.floor(seconds / 60);
+          minutes = (minutes >= 10) ? minutes : "0" + minutes;
+          
+          seconds = Math.floor(seconds % 60);
+          seconds = (seconds >= 10) ? seconds : "0" + seconds;
+          return minutes + ":" + seconds;
+      },
     },
     created() {
       AXIOS.get('/628695a99dd71c500df840ae').then(response => {
