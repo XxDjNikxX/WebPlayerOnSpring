@@ -166,7 +166,7 @@
       },
     },
     created() {
-      AXIOS.get('/').then(response => {
+      AXIOS.get('/getAllSongs').then(response => {
         this.songs.push({
           title: response.data.title,
           src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName,

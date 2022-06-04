@@ -25,7 +25,7 @@ public class SongController {
         this.songRepository = songRepository;
     }
 
-    @GetMapping
+    @GetMapping("/getAllSongs")
     public ResponseEntity<List<Song>> getSongs() {
         return ResponseEntity.ok(songRepository.findAll());
     }
