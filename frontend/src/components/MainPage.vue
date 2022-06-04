@@ -167,8 +167,8 @@
     },
     created() {
       AXIOS.get('/getAllSongs').then(response => {
-        response.map((index) => {
-          this.songs.push(response.data[index]);
+        response.map((item) => {
+          this.songs.push(item);
           });
         });
       }
