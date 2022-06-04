@@ -167,10 +167,11 @@
     },
     created() {
       AXIOS.get('/').then(response=> {
-          this.title = response.data.title,
-          this.artist =  response.data.artist,
-          this.src = 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName
-        
+          this.songs = {
+            title: response.data.title,
+            artist: response.data.artist,
+            src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName
+          }
       });
       console.log(this.songs);
     }
