@@ -169,7 +169,7 @@
       this.current = this.songs[0];
     },
     created() {
-      AXIOS.get('api/getAllSongs').then(response => {
+      AXIOS.get('/getAllSongs').then(response => {
         response.data.forEach((item) => {
           this.songs.push({
             title: item.title,
