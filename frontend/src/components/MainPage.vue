@@ -166,14 +166,7 @@
       },
     },
     created() {
-      AXIOS.get('/getAllSongs').then(response => {
-      var arrayObjects = [{
-        title: response.data.title,
-        artist: response.data.artist,
-        src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName
-      }];
-      this.songs.push(arrayObjects);
-      });
+      AXIOS.get('/getAllSongs').then(response.map((index) => this.songs.push(response[index])));
       console.log(this.songs);
     }
   }
