@@ -166,12 +166,12 @@
       },
     },
     created() {
-      AXIOS.get('/').then(response=> {
-          this.songs = {
-            title: response.data.title,
-            artist: response.data.artist,
-            src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName
-          }
+      AXIOS.get('/').then(response => {
+        this.songs.push({
+          title: response.data.title,
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/' + response.data.fileName,
+          artist: response.data.artist
+        });
       });
       console.log(this.songs);
     }
