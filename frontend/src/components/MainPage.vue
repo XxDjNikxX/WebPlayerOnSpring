@@ -167,10 +167,10 @@
     },
     created() {
       AXIOS.get('/getAllSongs').then(response => {
-        response.map((item) => {
+        response.forEach(function(item) {
           this.songs.push(item);
-          });
         });
-      }
+      });
+    }
 }
 </script>
