@@ -166,8 +166,11 @@
       },
     },
     created() {
-      AXIOS.get('/getAllSongs').then(response.map((index) => this.songs.push(response[index])));
-      console.log(this.songs);
-    }
-  }
+      AXIOS.get('/getAllSongs').then(response => {
+        response.map((index) => {
+          this.songs.push(response.data[index]);
+          });
+        });
+      }
+}
 </script>
