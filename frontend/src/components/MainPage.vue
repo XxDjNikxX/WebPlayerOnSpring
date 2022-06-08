@@ -67,10 +67,10 @@
               <p>{{current.currentTime}}</p>
               <p>{{current.duration}}</p>
             </div>
-            <div class="mt-1">
-              <div @click="seek" class="h-1  rounded-full  bg-gradient-to-r from-slate-500 bg-indigo-600">
-                <div   class="w-1/5 h-1 bg-red-light rounded-full relative">
-                  <div :style="{ width: this.percentComplete + '%' }" 
+            <div  class="mt-1">
+              <div @click="seek"  class="h-1  rounded-full  bg-gradient-to-r from-slate-500 bg-indigo-600">
+                <div  class="h-1 rounded-full relative">
+                  <div :style="{ width: this.percentComplete + '%' }"
                     class="w-4 h-4 bg-indigo-900 absolute pin-r pin-b -mt-1 rounded-full shadow dark:bg-white hover:bg-indigo-400 transition duration-300"></div>
                 </div>
               </div>
@@ -97,10 +97,15 @@
         songs:[{
           title: 'Song Player',
           artist: 'DjNik',
-          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null'
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/System Of A Down - Sugar.mp3'
         }],
         player: new Audio()
       }
+    },
+    computed: {
+      percentComplete () {
+      return parseInt(this.currentSeconds / this.currentDuration * 100)
+    }
     },
     methods: {
       play(song) {
@@ -121,6 +126,7 @@
 
         this.player.addEventListener('timeupdate', function() {
           this.current.currentTime = this.setDuration(this.player.currentTime);
+          this.current.currentSeconds = this.player.currentTime;
         }.bind(this));
 
         this.player.addEventListener('loadedmetadata', function() {
