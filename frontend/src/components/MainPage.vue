@@ -84,9 +84,9 @@
 
 <script>
   import {
-    AXIOS
-  } from '../http-common/http-commons';
-  
+    axiosApi
+  } from '../api/backend-api';
+
   export default {
     name: 'MainPage',
     data() {
@@ -97,7 +97,7 @@
         songs:[{
           title: 'Song Player',
           artist: 'DjNik',
-          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/System Of A Down - Sugar.mp3'
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null'
         }],
         player: new Audio()
       }
@@ -175,7 +175,7 @@
       this.current = this.songs[0];
     },
     created() {
-      AXIOS.get('/getAllSongs').then(response => {
+      axiosApi.get('/getAllSongs').then(response => {
         response.data.forEach((item) => {
           this.songs.push({
             title: item.title,

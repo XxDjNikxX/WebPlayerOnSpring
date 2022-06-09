@@ -13,7 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="backend" target="17" />
+      <module name="backend" target="1.8" />
       <module name="frontend" target="1.8" />
       <module name="SpringWebPlayer" target="1.8" />
       <module name="SpringWebPlayer (1)" target="17" />
