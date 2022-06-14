@@ -4,3 +4,8 @@ backend/src/main/resources/public/
 backend/target
 /Classes.uml
 .env
+
+# Intellij #
+.idea
+*.iml
+*.log
