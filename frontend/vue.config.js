@@ -8,6 +8,7 @@ module.exports = {
       }
     }
   },
+  productionSourceMap: false,
   transpileDependencies: true,
   outputDir: 'target/dist',
   assetsDir: 'static'
