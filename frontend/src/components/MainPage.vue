@@ -1,7 +1,7 @@
 <template>
   <section class="player">
-    <div class="w-full font-body">
-      <div class="flex items-center justify-center h-screen bg-whie bg-indigo-200 dark:bg-indigo-400">
+    <div class="w-full font-body bg-indigo-200 dark:bg-indigo-400">
+      <div class="flex items-center justify-center h-screen bg-indigo-200 dark:bg-indigo-400">
         <div class="bg-slate-200 shadow-lg rounded-md w-3/5 dark:bg-slate-800 dark:text-white">
           <div class="flex ">
             <div class="w-full p-8">
@@ -50,7 +50,7 @@
                 <div class="text-gray-700" @click="next">
                   <svg class="w-8 h-8 hover:fill-indigo-400 dark:text-white transition duration-300" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M13 5h3v10h-3V5zM4 5l9 5-9 5V5z" /></svg>
+                    <path d="M13 5h3v10h-3V5zM4 5l9 5-9 5V5z"/></svg>
                 </div>
                 <div class="text-gray-700 dark:text-white ">
                   <svg class="w-8 h-8 hover:fill-indigo-400 transition duration-300" fill="currentColor"

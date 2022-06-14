@@ -1,12 +1,12 @@
 <template>
-    <nav class="shadow-lg  dark:bg-slate-800 border-b-4 border-indigo-500 dark:border-b-black">
-        <div class="max-w-6xl mx-auto px-4  bg-purple-800  text-black dark:text-white">
+    <nav class="shadow-lg  bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4  bg-purple-800 text-white">
             <div class="flex justify-between">
                 <div class="flex space-x-7">
                     <div>
                         <router-link to="/">
                             <a class="flex items-center py-4 ">
-                                <img src="../assets/logo_transparent.png" alt="Logo" class="box-border bg-slate-100 w-20 h-20" />
+                                <img src="../assets/logo_transparent.png" alt="Logo" class="box-border bg-slate-100 w-20 h-20 m" />
                                 <span
                                     class="font-body hover:text-indigo-500  border-indigo-500 border-b-4 transition duration-300 text-lg">Runier
                                     Player</span>

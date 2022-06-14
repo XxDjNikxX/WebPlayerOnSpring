@@ -92,7 +92,7 @@
 							<includes>
 							  <include>static/</include>
 							  <include>index.html</include>
-							  <include>img/</include>
+							  <include>static/favicon.png</include>
 							</includes>
 						  </resource>
 						</resources>
