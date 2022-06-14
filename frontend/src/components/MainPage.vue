@@ -70,8 +70,8 @@
             <div  class="mt-1">
               <div @click="seek"  class="h-1  rounded-full  bg-gradient-to-r from-slate-500 bg-indigo-600">
                 <div  class="h-1 rounded-full relative">
-                  <div :style="{ width: this.percentComplete + '%' }"
-                    class="w-4 h-4 bg-indigo-900 absolute pin-r pin-b -mt-1 rounded-full shadow dark:bg-white hover:bg-indigo-400 transition duration-300"></div>
+                  <div :style="{ 'left': current.percentComplete + '%' }"
+                    class="w-4 h-4 bg-indigo-900 absolute -mt-1 rounded-full shadow dark:bg-white hover:bg-indigo-400 transition duration-300"></div>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@
         songs:[{
           title: 'Song Player',
           artist: 'DjNik',
-          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/null'
+          src: 'https://storage.yandexcloud.net/musicarchiveobjectstorage/Юность в сапогах (Gachi Version) _ Гачимучи ремикс.mp3'
         }],
         player: new Audio()
       }
