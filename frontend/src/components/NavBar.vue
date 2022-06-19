@@ -1,5 +1,5 @@
 <template>
-    <nav class="shadow-lg  bg-slate-800">
+    <nav class="shadow-lg bg-slate-800">
         <div class="max-w-6xl mx-auto px-4 text-white">
             <div class="flex justify-between">
                 <div class="flex space-x-7">
@@ -21,10 +21,10 @@
                             <a class="py-4 px-4 font-body hover:text-indigo-500 transition duration-300">О
                                 плерее</a>
                         </router-link>
-                        <router-link to="/contacts">
+                        <!-- <router-link to="/contacts">
                             <a class="py-4 px-4 font-body hover:text-indigo-500 transition duration-300">Обратная
                                 связь</a>
-                        </router-link>
+                        </router-link> -->
                     </div>
                 </div>
            
