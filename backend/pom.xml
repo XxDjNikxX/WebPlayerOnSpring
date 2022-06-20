@@ -93,6 +93,9 @@
 							  <include>static/</include>
 							  <include>index.html</include>
 							  <include>favicon.ico</include>
+							  <include>site.webmanifest</include>
+							  <include>favicon-16x16.png</include>
+							  <include>favicon-32x32.png</include>
 							</includes>
 						  </resource>
 						</resources>

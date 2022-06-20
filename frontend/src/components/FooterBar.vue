@@ -18,17 +18,11 @@
                             class="w-auto h-auto p-8 items-center text-center text-black dark:text-white">
                             Автор проекта:
                             <a href="https://t.me/xxxDjNikxxx">DjNik</a>
-                            <div>Рисунок котика: Саня</div>
+                            <div>Рисунок котика: <a href="https://vk.com/littlesadcat">Александра Затонская</a></div>
                         </div>
                           <div class=" p-8  text-center text-black dark:text-white">Cделано с любовью и душой :3</div>
                     </div>
-                    <!-- <div>
-                           <div
-                            class="w-auto h-auto p-8 items-center text-center  dark:bg-slate-800 dark:text-white">
-                            Художник:
-                            <a href="https://t.me/xxxDjNikxxx">Саша :)</a>
-                        </div>
-                    </div> -->
+
                 </div>
             </div>
         </div>
