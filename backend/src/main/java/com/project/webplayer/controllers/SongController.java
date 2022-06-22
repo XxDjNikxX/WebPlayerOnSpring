@@ -20,6 +20,8 @@ public class SongController {
     private final StorageService storageService;
     private final SongRepository songRepository;
 
+    public static final String SECURED_TEXT = "Hello from the secured resource!";
+
     public SongController(SongRepository songRepository, StorageService storageService) {
         this.storageService = storageService;
         this.songRepository = songRepository;
@@ -39,6 +41,12 @@ public class SongController {
            return ResponseEntity.notFound().build();
        }
     }
+
+    @GetMapping(path="/secured")
+    public @ResponseBody String getSecured() {
+        return SECURED_TEXT;
+    }
+
     @PostMapping(consumes = "multipart/form-data")
     public ResponseEntity<?> createSong(@RequestPart("songs") Song song, @RequestPart("file")MultipartFile file) throws IOException {
         if(songRepository.existsSongByFileNameEquals(song.getFileName())

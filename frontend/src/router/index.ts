@@ -6,12 +6,12 @@ import Auth from '../components/Auth/AuthPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
     {
-      path:"/auth",
-      component: Auth,
+      path:"/player",
+      component: Main,
     },
     {
       path: "/",
-      component: Main
+      component: Auth
     },
     {
       path: "/about",
